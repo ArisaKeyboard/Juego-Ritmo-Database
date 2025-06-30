@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyBUQfvg9O5DoOH5ILTXQn7JlN74fgPW1hE",
+  apiKey: "",
 
   authDomain: "rhythmgameanalytics.firebaseapp.com",
 
@@ -13,11 +13,11 @@ const firebaseConfig = {
 
   storageBucket: "rhythmgameanalytics.firebasestorage.app",
 
-  messagingSenderId: "328811286465",
+  messagingSenderId: "",
 
-  appId: "1:328811286465:web:15bbf75533652a2d21e940",
+  appId: "",
 
-  measurementId: "G-HR6XPFT1DS"
+  measurementId: ""
 
 };
 
