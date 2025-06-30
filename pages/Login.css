@@ -1,0 +1,105 @@
+:root {
+  --bg-color: #000;
+  --card-bg: rgba(30, 30, 30, 0.75);
+  --accent: #b11237;
+  --accent-hover: #910e1e;
+  --text: #ffffff;
+  --placeholder: #aaaaaa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+}
+
+.login-container {
+  height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+
+.main-logo {
+  width: 190px;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.login-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 40px rgba(177, 18, 38, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-icon {
+  width: 160px;
+  margin-bottom: 1rem;
+  filter: brightness(1.2);
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-text {
+  color: var(--placeholder);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: rgba(50, 50, 50, 0.8);
+  color: var(--text);
+  border: 1px solid #444;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.login-input::placeholder {
+  color: var(--placeholder);
+}
+
+.login-input:focus {
+  border: 1px solid var(--accent);
+  background: rgba(50, 50, 50, 0.95);
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: var(--accent-hover);
+}

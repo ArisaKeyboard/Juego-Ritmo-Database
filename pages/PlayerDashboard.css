@@ -1,0 +1,304 @@
+:root {
+  --bg-color: #1c1c1c;
+  --card-bg: #2a2a2a;
+  --input-bg: #333;
+  --accent: #b11237;
+  --accent-hover: #910e1e;
+  --text: #f5f5f5;
+  --placeholder: #999;
+  --border-color: #444;
+}
+
+/*estilos base */
+.player-dashboard {
+  background-color: var(--bg-color);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/*logo */
+.player-dashboard .logo {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 110px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.player-dashboard .logo:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/*encabezado */
+.player-dashboard .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6rem 0 2.5rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-dashboard .header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.player-dashboard .header p {
+  margin: 0.25rem 0 0 0;
+  color: var(--placeholder);
+  font-size: 0.9rem;
+}
+
+/*botones */
+.player-dashboard .logout-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.player-dashboard .logout-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*secciones */
+.player-dashboard .section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-dashboard .section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*titulos */
+.player-dashboard .section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.player-dashboard .section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent);
+}
+
+/*perfil */
+.player-dashboard .profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.player-dashboard .profile-info p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.player-dashboard .profile-info strong {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/*estadisticas */
+.player-dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.player-dashboard .stat-card {
+  background-color: rgba(177, 18, 55, 0.1);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--accent);
+}
+
+.player-dashboard .stat-card h3 {
+  font-size: 0.9rem;
+  color: var(--placeholder);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.player-dashboard .stat-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+/*tabla */
+.player-dashboard table {
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.player-dashboard th, .player-dashboard td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-dashboard thead {
+  background-color: rgba(177, 18, 55, 0.2);
+}
+
+.player-dashboard th {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.player-dashboard td {
+  color: var(--placeholder);
+}
+
+.player-dashboard tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/*formularios */
+.player-dashboard input,
+.player-dashboard select {
+  background-color: var(--input-bg);
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.player-dashboard input::placeholder {
+  color: var(--placeholder);
+}
+
+.player-dashboard input:focus,
+.player-dashboard select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(177, 18, 55, 0.2);
+}
+
+/*boton simular */
+.player-dashboard .simulate-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  transition: all 0.3s;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.player-dashboard .simulate-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*editar nombre de usuario */
+.player-dashboard .edit-username {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.player-dashboard .edit-username input {
+  flex: 1;
+  max-width: 300px;
+}
+
+.player-dashboard .edit-btn {
+  color: var(--accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.player-dashboard .edit-btn:hover {
+  color: var(--accent-hover);
+}
+
+.player-dashboard .save-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.3s;
+}
+
+.player-dashboard .save-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* inputs */
+.player-dashboard .input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/*mensaje de carga */
+.player-dashboard .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: var(--placeholder);
+}
